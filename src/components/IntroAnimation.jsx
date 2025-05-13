@@ -69,11 +69,11 @@ const IntroAnimation = ({ onAnimationComplete }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-green-50 z-50">
       <div
-        className="flex flex-col items-center justify-center px-6"
+        className="flex flex-col items-center justify-center px-6 w-4/5 sm:w-4/5 md:w-3/5 lg:w-2/5"
         style={transitionStyle}
       >
-        {/* Logo SVG - responsive sizing */}
-        <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 mb-4 md:mb-6">
+        {/* Logo SVG - responsive sizing with percentage-based width on mobile/tablet */}
+        <div className="w-4/5 aspect-square sm:w-4/5 md:w-40 lg:w-48 mb-4 md:mb-6">
           <svg
             viewBox="0 0 200 200"
             className="w-full h-full"
