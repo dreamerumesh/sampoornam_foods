@@ -131,7 +131,7 @@ const AddressSection = () => {
   }
   //console.log(addresses);
   return (
-    <div className="max-w-lg mx-auto p-4 mt-16 sm:p-6">
+    <div className="max-w-lg mx-auto p-4 mt-11 sm:p-6">
       <h2 className="text-xl font-bold mb-4">All Addresses</h2>
 
       {error && (
