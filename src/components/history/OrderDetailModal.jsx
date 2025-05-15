@@ -55,16 +55,19 @@ const OrderDetailModal = ({ order, isOpen, onOpenChange }) => {
             <h3 className="font-medium mb-2 text-base text-amber-800">
               Delivery Address
             </h3>
-            <p className="text-sm mb-1 text-gray-700">{order.address.name}</p>
-            <p className="text-sm mb-1 text-gray-700">
-              {order.address.addressLine1}
-            </p>
-            <p className="text-sm mb-1 text-gray-700">{order.address.city}</p>
-            <p className="text-sm mb-1 text-gray-700">
-              {order.address.pincode}
-            </p>
-            {/* {order.address} */}
-            <p className="text-sm text-gray-600">Phone: {order.phone}</p>
+            {order?.address ? (
+              <>
+                <p className="text-sm mb-1 text-gray-700">{order.address.name || "No name"}</p>
+                <p className="text-sm mb-1 text-gray-700">{order.address.addressLine1 || "Not available"}</p>
+                <p className="text-sm mb-1 text-gray-700">{order.address.city || "No city name"}</p>
+                <p className="text-sm mb-1 text-gray-700">{order.address.pincode||"No pincode"}</p>
+                <p className="text-sm text-gray-600">
+                  Phone: {order.phone || "Not available"}
+                </p>
+              </>
+            ) : (
+              <p className="text-sm text-gray-500">Order details not found</p>
+            )}
           </div>
 
           <div className="flex justify-between font-semibold text-lg pt-4 mt-2 border-t border-gray-200">

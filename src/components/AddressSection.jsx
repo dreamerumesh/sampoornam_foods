@@ -180,7 +180,7 @@ const AddressSection = () => {
               <div className="flex justify-between">
                 <div className="w-full">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
-                    <p className="font-semibold">
+                    <p className="font-semibold text-lg">
                       {address.name} ({address.type || "Home"})
                       {defaultAddressIndex === index && (
                         <span className="ml-2 text-sm text-green-600">
@@ -188,9 +188,9 @@ const AddressSection = () => {
                         </span>
                       )}
                     </p>
-                    <p className="text-sm text-gray-500">{address.phone}</p>
+                    <p className="text-sm text-gray-600">{address.phone}</p>
                   </div>
-                  <p className="text-sm md:text-base mt-1">
+                  <p className="text-sm md:text-base mt-1 text-gray-700">
                     {address.addressLine1}, {address.city}, {address.state} -{" "}
                     {address.pincode}
                   </p>
@@ -201,7 +201,7 @@ const AddressSection = () => {
                 <div className="mt-3 flex flex-col sm:flex-row gap-2">
                   {defaultAddressIndex !== index && (
                     <button
-                      className="w-1/2 bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 transition"
+                      className="w-1/2 bg-emerald-500 text-white px-3 py-1 rounded hover:bg-emerald-600 transition"
                       onClick={(e) => {
                         e.stopPropagation();
                         handleSetDefault(index);
@@ -212,7 +212,7 @@ const AddressSection = () => {
                   )}
                   <div className="w-full flex gap-2">
                     <button
-                      className="w-1/3 bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600 transition"
+                      className="w-1/3 bg-amber-500 text-white px-3 py-1 rounded hover:bg-amber-600 transition"
                       onClick={(e) => {
                         e.stopPropagation();
                         openAddressModal(index);
@@ -221,7 +221,7 @@ const AddressSection = () => {
                       Edit
                     </button>
                     <button
-                      className="w-1/3 bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition"
+                      className="w-1/3 bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600 transition"
                       onClick={(e) => {
                         e.stopPropagation();
                         handleDelete(index);
