@@ -96,8 +96,8 @@ const AddressSection = () => {
       setOrderPlacing(true);
       // Call your place-order endpoint with the default address
       const defaultAddress = addresses[defaultAddressIndex];
-      //console.log(defaultAddress._id);
-      const data = await placeOrder(defaultAddress._id);
+      //console.log(defaultAddress);
+      const data = await placeOrder(defaultAddress);
 
       //console.log(data.success);
       //console.log(data)
@@ -285,6 +285,12 @@ const AddressSection = () => {
                   }
                   placeholder="Mobile Number"
                   required
+                  minLength={10}
+                  maxLength={10}
+                  pattern="\d{10}"
+                  inputMode="numeric"
+                  onInvalid={(e) => e.target.setCustomValidity("Enter a valid 10-digit phone number")}
+                  onInput={(e) => e.target.setCustomValidity("")}
                   className="border p-2 rounded"
                 />
 

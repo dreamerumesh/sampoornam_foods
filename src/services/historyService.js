@@ -19,7 +19,7 @@ export const historyService = {
   // Place a new order
   placeOrder: async (address) => {
     //console.log("Address being sent to backend in history service:", address);
-    const response = await axiosInstance.post('/history/place-order', { address: address });
+    const response = await axiosInstance.post('/history/place-order', {...address});
     //console.log(response.data);
     return response;
   },
