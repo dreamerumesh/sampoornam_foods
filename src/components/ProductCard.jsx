@@ -4,6 +4,7 @@ import { useProduct } from "../contexts/ProductContext";
 import { useCart } from "../contexts/CartContext";
 import axiosInstance from "../utils/axiosConfig";
 import AddProductModal from "../components/AddProductModal";
+import LazyImage from "../components/LazyImage";
 import { Link } from "react-router-dom";
 import { CheckCircle } from "lucide-react";
 
@@ -98,10 +99,10 @@ const ProductCard = ({ product, isAdmin }) => {
       }`}
     >
       <Link to={`/product/${product._id}`} className="block">
-        <img
+        <LazyImage
           src={imageUrl}
           alt={product.name}
-          className="w-full h-36 object-cover rounded-t-lg mb-2"
+          className="w-full h-36 rounded-t-lg mb-2"
         />
 
         <h3 className="text-lg font-semibold text-emerald-700 mb-0">
