@@ -102,7 +102,7 @@ const ProductCard = ({ product, isAdmin }) => {
         <LazyImage
           src={imageUrl}
           alt={product.name}
-          className="w-full h-36 rounded-t-lg mb-2"
+          className="w-full h-[192px] md:h-36 object-cover rounded-t-lg mb-2"
         />
 
         <h3 className="text-lg font-semibold text-emerald-700 mb-0">
